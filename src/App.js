@@ -15,6 +15,7 @@ const App = () => {
       .then((data) => setUsers(data))
       .catch((err) => {
         console.log(err);
+        console.log("error");
       });
   };
 
