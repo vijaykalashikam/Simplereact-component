@@ -44,7 +44,7 @@ const App = () => {
         console.log(err);
       });
   };
-
+  console.log("checking for merge conflicts")
   const onDelete = async (id) => {
     await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
       method: "DELETE",
