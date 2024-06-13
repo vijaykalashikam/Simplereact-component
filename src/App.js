@@ -4,7 +4,8 @@ import "./App.css";
 import AddUser from "./components/AddUser";
 import User from "./components/User";
 
-console.log("trying to conflict merge");
+console.log("trying to conflict merge1");
+console.log("vamsi");
 
 const App = () => {
   const [users, setUsers] = useState([]);
