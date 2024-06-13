@@ -1,10 +1,10 @@
-console.log("New Change")
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
 import User from "./components/User";
 
-console.log("trying to conflict merge");
+console.log("trying to conflict merge2");
+console.log("vijay")
 
 const App = () => {
   const [users, setUsers] = useState([]);
