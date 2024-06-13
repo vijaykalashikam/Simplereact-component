@@ -1,0 +1,54 @@
+[33mcommit 76c09c8053fabfa4d05a12796e7b8160f218917a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mNewChange[m[33m)[m
+Merge: 1dc845a cf27693
+Author: vijaykalashikam <vijaykalashikam@gmail.com>
+Date:   Thu Jun 13 14:55:35 2024 +0530
+
+    List of new changes
+
+[33mcommit 1dc845a5d19b6f53dbeb783f105ade9060401ff1[m
+Author: vijaykalashikam <vijaykalashikam@gmail.com>
+Date:   Thu Jun 13 14:53:05 2024 +0530
+
+    another new change
+
+[33mcommit cf27693fe8a5bbfa11dfc9e2c577dda5fd3d8640[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: b2a8fc7 1c6c4cb
+Author: vijaykalashikam <123479467+vijaykalashikam@users.noreply.github.com>
+Date:   Thu Jun 6 17:38:08 2024 +0530
+
+    Merge pull request #2 from vijaykalashikam/NewChange
+    
+    new console statement -2
+
+[33mcommit 1c6c4cb70f1de51d7fbaec2579cf06e450b44a38[m[33m ([m[1;31morigin/NewChange[m[33m, [m[1;32mNewChange2[m[33m)[m
+Author: vijaykalashikam <vijaykalashikam@gmail.com>
+Date:   Wed Jun 5 15:27:15 2024 +0530
+
+    new console statement
+
+[33mcommit b2a8fc7bcf1a3a1b9b834ffb3b43e65884116a64[m
+Author: vamsikrishnaummadi <krishnavamsi9432@gmail.com>
+Date:   Wed Jun 5 10:58:27 2024 +0530
+
+    changed on submit
+
+[33mcommit 451f2eab2675fed227ed5f5541f4105312b49386[m
+Merge: bb87990 51b5564
+Author: vijaykalashikam <123479467+vijaykalashikam@users.noreply.github.com>
+Date:   Fri May 31 17:23:39 2024 +0530
+
+    Merge pull request #1 from vijaykalashikam/NewChange
+    
+    new changes
+
+[33mcommit 51b55647587e086a033de8b482c8d9554a1437bb[m
+Author: vijaykalashikam <vijaykalashikam@gmail.com>
+Date:   Fri May 31 17:19:45 2024 +0530
+
+    new changes
+
+[33mcommit bb8799012db284b0bee5e540a737bce5e37a429e[m[33m ([m[1;32mmaster[m[33m)[m
+Author: vijaykalashikam <vijaykalashikam@gmail.com>
+Date:   Fri May 31 17:14:26 2024 +0530
+
+    first push
