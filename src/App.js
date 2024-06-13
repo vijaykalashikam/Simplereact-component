@@ -1,3 +1,4 @@
+console.log("New Change")
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
@@ -46,7 +47,7 @@ const App = () => {
         console.log(err);
       });
   };
-
+  console.log("checking for merge conflicts")
   const onDelete = async (id) => {
     await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
       method: "DELETE",
