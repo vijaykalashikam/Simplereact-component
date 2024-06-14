@@ -6,6 +6,8 @@ import User from "./components/User";
 console.log("trying to conflict merge");
 
 const App = () => {
+  const [add,setAdd] = useState("")
+  console.log("Here is the function starting")
   const [users, setUsers] = useState([]);
   useEffect(() => {
     fetchData();
@@ -20,6 +22,15 @@ const App = () => {
         console.log("error");
       });
   };
+   function addition (add) {
+    console.log("Enter two numbers")
+    setAdd = (e) => {
+      e.target.value
+    }
+    return (a+b)
+  }
+
+  
 
   const onAdd = async (name, email) => {
     await fetch("https://jsonplaceholder.typicode.com/users", {
