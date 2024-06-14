@@ -46,27 +46,8 @@ const App = () => {
         console.log(err);
       });
   };
-  console.log("checking for merge conflicts")
-  const onDelete = async (id) => {
-    await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => {
-        if (res.status !== 200) {
-          return;
-        } else {
-          setUsers(
-            users.filter((user) => {
-              return user.id !== id;
-            })
-          );
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
+    
   console.log(users);
   return (
     <div className="App">
