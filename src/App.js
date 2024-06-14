@@ -3,10 +3,13 @@ import "./App.css";
 import AddUser from "./components/AddUser";
 import User from "./components/User";
 
-console.log("trying to conflict merge");
 
 const App = () => {
   const [users, setUsers] = useState([]);
+
+  const clickHandler = (e) => {
+    setCoder(e.target.value);
+  }
   useEffect(() => {
     fetchData();
   }, []);
@@ -20,6 +23,15 @@ const App = () => {
         console.log("error");
       });
   };
+   function addition (add) {
+    console.log("Enter two numbers")
+    setAdd = (e) => {
+      e.target.value
+    }
+    return (a+b)
+  }
+
+  
 
   const onAdd = async (name, email) => {
     await fetch("https://jsonplaceholder.typicode.com/users", {
