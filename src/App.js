@@ -1,3 +1,4 @@
+console.log("New Change")
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
@@ -12,7 +13,7 @@ const App = () => {
   }, []);
 
   const fetchData = async () => {
-    await fetch("https://jsonplaceholder.typicode.com/users")
+    await fetch("https://jsonplaceholder.typicode.com/users") 
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => {
