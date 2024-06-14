@@ -1,10 +1,10 @@
+console.log("New Change")
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
 import User from "./components/User";
 
-console.log("trying to conflict merge2");
-console.log("vijay")
+console.log("trying to conflict merge");
 
 const App = () => {
   const [users, setUsers] = useState([]);
@@ -13,7 +13,7 @@ const App = () => {
   }, []);
 
   const fetchData = async () => {
-    await fetch("https://jsonplaceholder.typicode.com/users")
+    await fetch("https://jsonplaceholder.typicode.com/users") 
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => {
