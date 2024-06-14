@@ -3,10 +3,14 @@ import "./App.css";
 import AddUser from "./components/AddUser";
 import User from "./components/User";
 
-console.log("trying to conflict merge");
 
 const App = () => {
+  const [Coder ,setCoder] = useState("");
   const [users, setUsers] = useState([]);
+
+  const clickHandler = (e) => {
+    setCoder(e.target.value);
+  }
   useEffect(() => {
     fetchData();
   }, []);
@@ -66,6 +70,10 @@ const App = () => {
         console.log(err);
       });
   };
+    <div>
+       <input type="text" value={Coder} placeholder="Enter the name of code" onClick={clickHandler}></input>
+    </div>
+   
 
   console.log(users);
   return (
