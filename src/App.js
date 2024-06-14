@@ -4,6 +4,9 @@ import AddUser from "./components/AddUser";
 import User from "./components/User";
 
 
+console.log("Another merge conflict")
+
+
 const App = () => {
   const [users, setUsers] = useState([]);
 
@@ -23,13 +26,15 @@ const App = () => {
         console.log("error");
       });
   };
-   function addition (add) {
-    console.log("Enter two numbers")
-    setAdd = (e) => {
-      e.target.value
-    }
-    return (a+b)
-  }
+  //  function addition (add) {
+  //   console.log("Enter two numbers")
+  //   setAdd = (e) => {
+  //     e.target.value
+  //   }
+  //   return (a+b)
+  // }
+
+  <p>I have commented out the whole add function</p>
 
   
 
