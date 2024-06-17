@@ -64,35 +64,8 @@ const App = () => {
     );
 };
 
-  
+ console.log("removed the posts function") 
 
-  const onAdd = async (name, email) => {
-    await fetch("https://jsonplaceholder.typicode.com/users", {
-      method: "POST",
-      body: JSON.stringify({
-        name: name,
-        email: email,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => {
-        if (res.status !== 201) {
-          return;
-        } else {
-          return res.json();
-        }
-      })
-      .then((data) => {
-        setUsers((users) => [...users, data]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-    
   console.log(users);
   return (
     <div className="App">
