@@ -4,9 +4,6 @@ import AddUser from "./components/AddUser";
 import User from "./components/User";
 
 
-console.log("Another merge conflict")
-
-
 const App = () => {
   const [users, setUsers] = useState([]);
 
@@ -82,18 +79,6 @@ const App = () => {
         console.log(err);
       });
   };
-  const FetchComments = () => {
-    const [comments, setComments] = useState([]);
-
-    const fetchComments = async () => {
-        try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/comments');
-            const data = await response.json();
-            setComments(data);
-        } catch (error) {
-            console.error('Error fetching comments:', error);
-        }
-    };
 
     useEffect(() => {
         fetchComments();
@@ -132,6 +117,6 @@ const App = () => {
       </div>
     </div>
   );
-};
+
 
 export default App;
