@@ -23,13 +23,34 @@ const App = () => {
         console.log("error");
       });
   };
-   function addition (add) {
-    console.log("Enter two numbers")
-    setAdd = (e) => {
-      e.target.value
-    }
-    return (a+b)
-  }
+  const FetchUsers = () => {
+    const [users, setUsers] = useState([]);
+
+    const fetchUsers = async () => {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/users');
+            const data = await response.json();
+            setUsers(data);
+        } catch (error) {
+            console.error('Error fetching users:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchUsers();
+    }, []);
+
+    return (
+        <div>
+            {users.map(user => (
+                <div key={user.id}>
+                    <h2>{user.name}</h2>
+                    <p>{user.email}</p>
+                </div>
+            ))}
+        </div>
+    );
+};
 
   
 
