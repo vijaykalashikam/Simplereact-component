@@ -82,7 +82,35 @@ const App = () => {
         console.log(err);
       });
   };
+  const FetchComments = () => {
+    const [comments, setComments] = useState([]);
 
+    const fetchComments = async () => {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/comments');
+            const data = await response.json();
+            setComments(data);
+        } catch (error) {
+            console.error('Error fetching comments:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchComments();
+    }, []);
+
+    return (
+        <div>
+            {comments.map(comment => (
+                <div key={comment.id}>
+                    <h3>{comment.name}</h3>
+                    <p>{comment.body}</p>
+                    <p><strong>Email:</strong> {comment.email}</p>
+                </div>
+            ))}
+        </div>
+    );
+};
     
   console.log(users);
   return (
