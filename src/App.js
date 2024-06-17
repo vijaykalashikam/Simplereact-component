@@ -35,6 +35,34 @@ const App = () => {
   // }
 
   <p>I have commented out the whole add function</p>
+  const FetchUsers = () => {
+    const [users, setUsers] = useState([]);
+
+    const fetchUsers = async () => {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/users');
+            const data = await response.json();
+            setUsers(data);
+        } catch (error) {
+            console.error('Error fetching users:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchUsers();
+    }, []);
+
+    return (
+        <div>
+            {users.map(user => (
+                <div key={user.id}>
+                    <h2>{user.name}</h2>
+                    <p>{user.email}</p>
+                </div>
+            ))}
+        </div>
+    );
+};
 
   
 
@@ -63,31 +91,8 @@ const App = () => {
         console.log(err);
       });
   };
-  console.log("checking for merge conflicts")
-  const onDelete = async (id) => {
-    await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => {
-        if (res.status !== 200) {
-          return;
-        } else {
-          setUsers(
-            users.filter((user) => {
-              return user.id !== id;
-            })
-          );
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-    <div>
-       <input type="text" value={Coder} placeholder="Enter the name of code" onClick={clickHandler}></input>
-    </div>
-   
 
+    
   console.log(users);
   return (
     <div className="App">
