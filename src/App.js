@@ -7,38 +7,34 @@ import User from "./components/User";
 const App = () => {
   const [users, setUsers] = useState([]);
 
-  const clickHandler = (e) => {
-    setCoder(e.target.value);
-  }
   useEffect(() => {
     fetchData();
   }, []);
 
+  const fetchUsers = async () => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await response.json();
+        setUsers(data);
+    } catch (error) {
+        console.error('Error fetching users:', error);
+    }
+};
+
+useEffect(() => {
+    fetchUsers();
+}, []);
+
   const fetchData = async () => {
     await fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((data) => setUsers(data))
-      .catch((err) => {
-        console.log(err);
+      .then((response) => response.json())
+      .then((userdata) => setUsers(userdata))
+      .catch((error) => {
+        console.log(error);
         console.log("error");
       });
   };
-  // const FetchUsers = () => {
-  //   const [users, setUsers] = useState([]);
-
-  //   const fetchUsers = async () => {
-  //       try {
-  //           const response = await fetch('https://jsonplaceholder.typicode.com/users');
-  //           const data = await response.json();
-  //           setUsers(data);
-  //       } catch (error) {
-  //           console.error('Error fetching users:', error);
-  //       }
-  //   };
-
-    useEffect(() => {
-        fetchUsers();
-    }, []);
+  
 
     return (
         <div>
