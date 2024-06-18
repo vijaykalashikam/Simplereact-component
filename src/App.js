@@ -4,9 +4,6 @@ import AddUser from "./components/AddUser";
 import User from "./components/User";
 
 
-console.log("Another merge conflict")
-
-
 const App = () => {
   const [users, setUsers] = useState([]);
 
@@ -26,18 +23,18 @@ const App = () => {
         console.log("error");
       });
   };
-  const FetchUsers = () => {
-    const [users, setUsers] = useState([]);
+  // const FetchUsers = () => {
+  //   const [users, setUsers] = useState([]);
 
-    const fetchUsers = async () => {
-        try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users');
-            const data = await response.json();
-            setUsers(data);
-        } catch (error) {
-            console.error('Error fetching users:', error);
-        }
-    };
+  //   const fetchUsers = async () => {
+  //       try {
+  //           const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  //           const data = await response.json();
+  //           setUsers(data);
+  //       } catch (error) {
+  //           console.error('Error fetching users:', error);
+  //       }
+  //   };
 
     useEffect(() => {
         fetchUsers();
@@ -84,7 +81,6 @@ const App = () => {
   };
 
     
-  console.log(users);
   return (
     <div className="App">
       <h3>React Crud Using Jsonplaceholder</h3>
@@ -104,6 +100,6 @@ const App = () => {
       </div>
     </div>
   );
-};
+
 
 export default App;
