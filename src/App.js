@@ -47,34 +47,22 @@ useEffect(() => {
         </div>
     );
 };
+const FetchUsers = () => {
+  const [users, setUsers] = useState([]);
 
-  
-
-  const onAdd = async (name, email) => {
-    await fetch("https://jsonplaceholder.typicode.com/users", {
-      method: "POST",
-      body: JSON.stringify({
-        name: name,
-        email: email,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((res) => {
-        if (res.status !== 201) {
-          return;
-        } else {
-          return res.json();
-        }
-      })
-      .then((data) => {
-        setUsers((users) => [...users, data]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const fetchUsers = async () => {
+      try {
+          const response = await fetch('https://jsonplaceholder.typicode.com/users');
+          const data = await response.json();
+          setUsers(data);
+      } catch (error) {
+          console.error('Error fetching users:', error);
+      }
   };
+
+  useEffect(() => {
+      fetchUsers();
+  }, []);
 
     
   return (
@@ -96,6 +84,6 @@ useEffect(() => {
       </div>
     </div>
   );
-
+};
 
 export default App;
