@@ -1,42 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 
 const AddUser = ({ onAdd }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleOnSubmit = (e) => {
+const handleOnSubmit = (e) => {
     e.preventDefault();
-    if (name && email) {
-      onAdd(name, email);
-      setName("");
-      setEmail("");
-    }
-  };
+    onAdd(e.target.name.value,e.target.email.value);
+    e.target.name.value = "";
+    e.target.email.value = "";
+}
 
   return (
     <div>
       <form onSubmit={handleOnSubmit}>
         <h3>Add User</h3>
-        <input 
-          type="text" 
-          placeholder="Name" 
-          value={name} 
-          onChange={handleNameChange} 
-        />
-        <input 
-          type="email" 
-          placeholder="Email" 
-          value={email} 
-          onChange={handleEmailChange} 
-        />
+        <input placeholder="Name" name="name" />
+        <input placeholder="Email" name="email" />
         <button type="submit">Add</button>
         <hr />
       </form>
