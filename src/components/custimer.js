@@ -7,6 +7,14 @@ const custimer = () => {
         e.preventDefault();
         console.log(e.target.customer.value);
     }
+    const handleclick () => {
+      if(customer === ""){
+        setCustomer("vijay")
+      }
+      else{
+        setCustomer("")
+      }
+    }
   return ( 
     <div>
     <form onSubmit={handleOnSubmit}>
