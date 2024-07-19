@@ -9,12 +9,14 @@ const User = ({id,email,name,onDelete}) => {
 
     return (
         <div className='list'>
+          <form onSubmit={handleDelete}>
             <span>{name}</span>
             <span>{email}</span>
             <span>
                 <button>edit</button>
                 <button onClick={handleDelete}>delete</button>
             </span>
+          </form>
         </div>
     )
 }
