@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/AddUser";
 import User from "./components/User";
+import Homepage from "./components/pages/Homepage";
 
 
 console.log("Another merge conflict")
@@ -44,7 +45,9 @@ const App = () => {
     }, []);
 
     return (
+      
         <div>
+        <Homepage/>
             {users.map(user => (
                 <div key={user.id}>
                     <h2>{user.name}</h2>
