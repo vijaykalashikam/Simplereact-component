@@ -16,6 +16,7 @@ const handleOnSubmit = (e) => {
         <input placeholder="Name" name="name" />
         <input placeholder="Email" name="email" />
         <button type="submit">Add</button>
+        console.log("User has been added")
         <hr />
       </form>
     </div>

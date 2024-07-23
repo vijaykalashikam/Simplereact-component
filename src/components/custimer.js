@@ -20,6 +20,7 @@ const custimer = () => {
     <form onSubmit={handleOnSubmit}>
     <input placeholder='Customer' onChange={(e) => setCustomer(e.target.value)}  name='customer'   value={customer}></input>
     <label>Customer Name</label>
+    console.log(customer)
     </form>
     
     </div>
