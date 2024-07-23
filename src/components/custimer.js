@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 
 const custimer = () => {
     const [customer , setCustomer] = useState("")
+
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target.customer.value);
+    }
     const handleclick () => {
       if(customer === ""){
         setCustomer("vijay")
@@ -13,10 +18,13 @@ const custimer = () => {
       }
     }
   return ( 
-    <>
-    <h1>{customer}</h1>
-    <button onClick={handleclick}>click</button>
-    </>
+    <div>
+    <form onSubmit={handleOnSubmit}>
+    <input placeholder='Customer' onChange={(e) => setCustomer(e.target.value)}  name='customer'   value={customer}></input>
+    <label>Customer Name</label>
+    </form>
+    
+    </div>
   )
 }
 

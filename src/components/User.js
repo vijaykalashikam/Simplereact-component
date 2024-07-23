@@ -9,6 +9,7 @@ const User = ({id,email,name,onDelete}) => {
 
     return (
         <div className='list'>
+          <form onSubmit={handleDelete}>
             <span>{name}</span>
             <span>{email}</span>
             <span>
@@ -17,6 +18,7 @@ const User = ({id,email,name,onDelete}) => {
                 console.log("delete")
             </span>
             
+          </form>
         </div>
     )
 }
