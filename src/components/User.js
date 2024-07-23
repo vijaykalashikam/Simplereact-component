@@ -14,7 +14,9 @@ const User = ({id,email,name,onDelete}) => {
             <span>
                 <button>edit</button>
                 <button onClick={handleDelete}>delete</button>
+                console.log("delete")
             </span>
+            
         </div>
     )
 }

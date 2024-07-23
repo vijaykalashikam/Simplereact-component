@@ -46,6 +46,7 @@ const App = () => {
                 <div key={user.id}>
                     <h2>{user.name}</h2>
                     <p>{user.email}</p>
+                    console.log(user)
                 </div>
             ))}
         </div>

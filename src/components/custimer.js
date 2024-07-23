@@ -5,9 +5,11 @@ const custimer = () => {
     const handleclick () => {
       if(customer === ""){
         setCustomer("vijay")
+        console.log(customer)
       }
       else{
         setCustomer("")
+        console.log(customer)
       }
     }
   return ( 
