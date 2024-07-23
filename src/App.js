@@ -52,7 +52,7 @@ const App = () => {
                 <div key={user.id}>
                     <h2>{user.name}</h2>
                     <p>{user.email}</p>
-                    <p>This  are the details of the user</p>
+                    console.log(user)
                 </div>
             ))}
         </div>
